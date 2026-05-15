@@ -1,38 +1,46 @@
 export const metadata = {
-  title: "Arnaque DHL SMS : comment détecter les faux messages",
+  title: "SMS DHL arnaque : comment reconnaître un faux message de colis",
   description:
-    "Guide pour identifier les faux SMS DHL et éviter les arnaques de livraison de colis.",
+    "Analyse des faux SMS DHL liés aux livraisons de colis. Apprends à repérer les signes d’arnaque et à éviter les liens frauduleux.",
 };
+
 import PageWrapper from "@/components/PageWrapper";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <PageWrapper title="Faux SMS DHL : attention aux arnaques">
-      <p>
-        Les escrocs utilisent DHL pour tromper les utilisateurs avec de faux messages de livraison.
-      </p>
 
-      <h2>Exemple</h2>
-      <p>
-        “Votre colis DHL est bloqué, cliquez ici pour le débloquer.”
-      </p>
+      <main>
+        <h1>SMS DHL arnaque : comment reconnaître un faux message de colis</h1>
 
-      <h2>Signes</h2>
-      <ul>
-        <li>Lien non officiel</li>
-        <li>Pression urgente</li>
-        <li>Demande de données personnelles</li>
-      </ul>
+        <p>
+          Les escrocs utilisent DHL pour tromper les utilisateurs avec de faux messages de livraison de colis.
+        </p>
 
-      <h2>Conseil</h2>
-      <p>
-        Vérifiez toujours sur le site officiel DHL.
-      </p>
+        <h2>Exemple de faux SMS DHL</h2>
+        <p>
+          “Votre colis DHL est bloqué, cliquez ici pour le débloquer.”
+        </p>
+
+        <h2>Signes d’une arnaque DHL</h2>
+        <ul>
+          <li>Lien non officiel</li>
+          <li>Message urgent ou menaçant</li>
+          <li>Demande de données personnelles ou paiement</li>
+        </ul>
+
+        <h2>Comment réagir ?</h2>
+        <p>
+          Vérifiez toujours directement sur le site officiel de DHL avant toute action.
+        </p>
+
+        <h2>Vérifier un SMS suspect</h2>
+        <Link href="/">
+          🔎 Tester un SMS suspect
+        </Link>
+      </main>
+
     </PageWrapper>
   );
 }
-<div style={{ marginTop: 30 }}>
-  <a href="/" style={{ color: "blue" }}>
-    🔎 Tester un SMS suspect ici
-  </a>
-</div>

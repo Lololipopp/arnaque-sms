@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -69,29 +70,41 @@ export default function Home() {
   }
 
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#f4f4f4",
-        padding: 40,
-        fontFamily: "Arial"
-      }}
-    >
-      <div
-        style={{
-          maxWidth: 700,
-          margin: "0 auto",
-          background: "white",
-          padding: 30,
-          borderRadius: 20,
-          boxShadow: "0 4px 20px rgba(0,0,0,0.1)"
-        }}
-      >
-        <h1 style={{ fontSize: 32 }}>
-          Vérifiez un SMS ou lien suspect
-        </h1>
+    <main style={{ minHeight: "100vh", background: "#f4f4f4", padding: 40, fontFamily: "Arial" }}>
 
-        <p style={{ marginTop: 10, color: "#555" }}>
+      {/* 🔥 SEO BLOCK (IMPORTANT) */}
+      <section style={{ maxWidth: 900, margin: "0 auto 40px auto" }}>
+        <h1>Détecteur d’arnaques SMS colis (DHL, Chronopost, UPS)</h1>
+
+        <p>
+          Analysez gratuitement un SMS, email ou lien suspect pour détecter les arnaques liées aux livraisons de colis.
+          Ce service aide à identifier les faux messages utilisés par les escrocs.
+        </p>
+
+        <p>
+          Arnaques fréquentes : 
+          <strong> DHL </strong>, 
+          <strong> Chronopost </strong>, 
+          <strong> Colissimo </strong>, 
+          <strong> UPS </strong>.
+        </p>
+
+        <h2>Guides associés</h2>
+
+        <ul>
+          <li><Link href="/arnaque-dhl">Arnaque SMS DHL</Link></li>
+          <li><Link href="/arnaque-chronopost">Arnaque SMS Chronopost</Link></li>
+          <li><Link href="/arnaque-colis">Arnaques colis</Link></li>
+          <li><Link href="/colis-bloque">Colis bloqué : arnaque ou vrai ?</Link></li>
+          <li><Link href="/paiement-livraison">Paiement livraison</Link></li>
+          <li><Link href="/arnaque-livraison-quefaire">Que faire ?</Link></li>
+        </ul>
+      </section>
+
+      {/* 🔥 TOOL BLOCK */}
+      <div style={{ maxWidth: 700, margin: "0 auto", background: "white", padding: 30, borderRadius: 20, boxShadow: "0 4px 20px rgba(0,0,0,0.1)" }}>
+
+        <p style={{ marginBottom: 10, color: "#555" }}>
           Collez un SMS, email ou lien douteux.
         </p>
 
@@ -99,51 +112,25 @@ export default function Home() {
           placeholder="Exemple : Votre colis est bloqué..."
           value={text}
           onChange={(e) => setText(e.target.value)}
-          style={{
-            width: "100%",
-            height: 180,
-            marginTop: 20,
-            padding: 15,
-            borderRadius: 10,
-            border: "1px solid #ccc",
-            fontSize: 16
-          }}
+          style={{ width: "100%", height: 180, padding: 15, borderRadius: 10, border: "1px solid #ccc", fontSize: 16 }}
         />
 
         <button
           onClick={analyze}
-          style={{
-            marginTop: 20,
-            padding: "14px 20px",
-            borderRadius: 10,
-            border: "none",
-            background: "black",
-            color: "white",
-            cursor: "pointer",
-            fontSize: 16
-          }}
+          style={{ marginTop: 20, padding: "14px 20px", borderRadius: 10, border: "none", background: "black", color: "white", cursor: "pointer", fontSize: 16 }}
         >
           Analyser maintenant
         </button>
 
         {result && (
-          <div
-            style={{
-              marginTop: 30,
-              padding: 20,
-              borderRadius: 10,
-              background: "#fafafa",
-              border: "1px solid #ddd"
-            }}
-          >
+          <div style={{ marginTop: 30, padding: 20, borderRadius: 10, background: "#fafafa", border: "1px solid #ddd" }}>
             <h2>{result}</h2>
-
-            <p style={{ marginTop: 10, color: "#444" }}>
-              {details}
-            </p>
+            <p style={{ marginTop: 10, color: "#444" }}>{details}</p>
           </div>
         )}
+
       </div>
+
     </main>
   );
 }

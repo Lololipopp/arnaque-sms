@@ -1,38 +1,46 @@
 export const metadata = {
-  title: "Faux SMS Chronopost : arnaques et comment les éviter",
+  title: "Arnaque Chronopost SMS : comment reconnaître un faux message",
   description:
-    "Apprenez à reconnaître les faux SMS Chronopost et évitez les tentatives de phishing liées aux colis.",
+    "Analyse des SMS Chronopost suspects. Vérifie si ton message est une arnaque ou une vraie livraison.",
 };
+
 import PageWrapper from "@/components/PageWrapper";
+import Link from "next/link";
 
 export default function Page() {
   return (
-    <PageWrapper title="Faux SMS Chronopost : comment les reconnaître ?">
-      <p>
-        Les faux SMS Chronopost sont très fréquents en France et visent à voler vos données ou vos paiements.
-      </p>
+    <PageWrapper title="Faux SMS Chronopost : comment les reconnaître">
 
-      <h2>Exemple d’arnaque</h2>
-      <p>
-        “Votre colis est en attente. Paiement de 2,99€ requis pour livraison.”
-      </p>
+      <main>
+        <h1>Arnaque Chronopost SMS : comment reconnaître un faux message</h1>
 
-      <h2>Signes d’alerte</h2>
-      <ul>
-        <li>Lien étrange</li>
-        <li>Urgence artificielle</li>
-        <li>Demande de paiement</li>
-      </ul>
+        <p>
+          Les faux SMS Chronopost sont très fréquents en France et visent à voler vos données personnelles ou bancaires.
+        </p>
 
-      <h2>Important</h2>
-      <p>
-        Chronopost ne demande jamais de paiement par SMS.
-      </p>
+        <h2>Exemple d’arnaque Chronopost</h2>
+        <p>
+          “Votre colis est en attente. Paiement de 2,99€ requis pour livraison.”
+        </p>
+
+        <h2>Signes d’alerte</h2>
+        <ul>
+          <li>Lien suspect ou raccourci</li>
+          <li>Urgence artificielle</li>
+          <li>Demande de paiement inattendue</li>
+        </ul>
+
+        <h2>Important</h2>
+        <p>
+          Chronopost ne demande jamais de paiement par SMS.
+        </p>
+
+        <h2>Vérifier un SMS suspect</h2>
+        <Link href="/">
+          🔎 Tester un SMS suspect
+        </Link>
+      </main>
+
     </PageWrapper>
   );
 }
-<div style={{ marginTop: 30 }}>
-  <a href="/" style={{ color: "blue" }}>
-    🔎 Tester un SMS suspect ici
-  </a>
-</div>
