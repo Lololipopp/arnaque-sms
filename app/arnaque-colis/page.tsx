@@ -5,8 +5,6 @@ export default function Page() {
   return (
     <PageWrapper title="SMS arnaque colis : faux messages de livraison">
 
-      <h1>SMS arnaque colis : comment reconnaître les faux messages</h1>
-
       <p>
         Les arnaques aux SMS de colis sont de plus en plus fréquentes en France.
         Elles utilisent des messages urgents pour pousser à cliquer sur un lien frauduleux.
