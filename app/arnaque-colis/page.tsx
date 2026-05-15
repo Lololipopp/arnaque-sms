@@ -37,8 +37,6 @@ export default function Page() {
         Ne cliquez jamais sur les liens. Vérifiez directement sur le site officiel du transporteur.
       </p>
 
-      <h2>Vérifier un message reçu :</h2>
-
       <hr style={{ marginTop: 40 }} />
 
       <h2>Pages associées</h2>
