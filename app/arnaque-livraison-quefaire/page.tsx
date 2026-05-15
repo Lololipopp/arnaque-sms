@@ -34,9 +34,6 @@ export default function Page() {
           Changez vos mots de passe et surveillez vos comptes bancaires.
         </p>
 
-        <Link href="/">
-          🔎 Tester un SMS suspect
-        </Link>
       </main>
 
     </PageWrapper>

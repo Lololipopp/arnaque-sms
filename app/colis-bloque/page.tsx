@@ -36,9 +36,6 @@ export default function Page() {
           Ne cliquez jamais sur le lien. Vérifiez directement sur le site du transporteur.
         </p>
 
-        <Link href="/">
-          🔎 Tester un SMS suspect
-        </Link>
       </main>
 
     </PageWrapper>

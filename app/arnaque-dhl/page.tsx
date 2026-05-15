@@ -34,9 +34,6 @@ export default function Page() {
           Vérifiez toujours directement sur le site officiel de DHL avant toute action.
         </p>
 
-        <Link href="/">
-          🔎 Tester un SMS suspect
-        </Link>
       </main>
 
     </PageWrapper>

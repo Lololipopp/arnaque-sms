@@ -35,9 +35,6 @@ export default function Page() {
           Les transporteurs ne demandent pas de paiement via SMS.
         </p>
 
-        <Link href="/">
-          🔎 Tester un SMS suspect
-        </Link>
       </main>
 
     </PageWrapper>
