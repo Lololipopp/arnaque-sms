@@ -29,7 +29,7 @@ export default function Page() {
           <li>Demande de paiement inattendue</li>
         </ul>
 
-        <h2>Important</h2>
+        <h2>Important :</h2>
         <p>
           Chronopost ne demande jamais de paiement par SMS.
         </p>
