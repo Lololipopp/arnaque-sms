@@ -1,25 +1,24 @@
+import PageWrapper from "@/components/PageWrapper";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <main>
+    <PageWrapper title="SMS arnaque colis : faux messages de livraison">
 
-      <h1>SMS arnaque colis : comment reconnaître les faux messages de livraison</h1>
-
-      <p>
-        Les arnaques aux SMS de colis sont aujourd’hui très répandues en France.
-        Elles consistent à envoyer de faux messages se faisant passer pour des transporteurs afin de voler des informations personnelles ou bancaires.
-      </p>
-
-      <h2>Comment fonctionne une arnaque SMS de colis ?</h2>
+      <h1>SMS arnaque colis : comment reconnaître les faux messages</h1>
 
       <p>
-        Vous recevez un SMS indiquant qu’un colis est en attente, bloqué ou nécessite une action urgente.
-        Le message contient généralement un lien menant vers un site frauduleux imitant un transporteur officiel.
+        Les arnaques aux SMS de colis sont de plus en plus fréquentes en France.
+        Elles utilisent des messages urgents pour pousser à cliquer sur un lien frauduleux.
       </p>
 
-      <h2>Transporteurs les plus souvent usurpés</h2>
+      <h2>Comment fonctionne une arnaque ?</h2>
+      <p>
+        Vous recevez un SMS indiquant qu’un colis est bloqué ou en attente de paiement.
+        Le lien redirige vers un faux site imitant un transporteur.
+      </p>
 
+      <h2>Transporteurs souvent usurpés</h2>
       <ul>
         <li>Chronopost</li>
         <li>DHL</li>
@@ -27,36 +26,37 @@ export default function Page() {
         <li>Colissimo</li>
       </ul>
 
-      <h2>Signes typiques d’un SMS frauduleux</h2>
-
+      <h2>Comment reconnaître un faux SMS ?</h2>
       <ul>
-        <li>Sentiment d’urgence ou de pression</li>
-        <li>Lien externe raccourci ou suspect</li>
-        <li>Demande de paiement inattendue</li>
-        <li>Formulation approximative ou générique</li>
+        <li>Message urgent ou menaçant</li>
+        <li>Lien suspect</li>
+        <li>Demande de paiement</li>
+        <li>Fautes ou formulation étrange</li>
       </ul>
 
-      <h2>Que faire si vous recevez un SMS suspect ?</h2>
-
+      <h2>Que faire ?</h2>
       <p>
-        Ne cliquez jamais sur les liens contenus dans le message.
-        Vérifiez directement auprès du transporteur via son site officiel ou son application.
+        Ne cliquez jamais sur les liens. Vérifiez directement sur le site officiel du transporteur.
       </p>
 
-      <p>
-        En cas de doute, vous pouvez analyser le message avec notre outil de détection automatique.
-      </p>
+      <h2>Tester un SMS suspect</h2>
 
-      <h2>Analysez un SMS en quelques secondes</h2>
-
-      <p>
-        Collez simplement le message dans notre outil pour obtenir un niveau de risque basé sur plusieurs critères :
-        liens, mots suspects et signaux de confiance.
-      </p>
-
-      <Link href="/">
-        🔎 Tester un SMS suspect
-      </Link>
+      {/* 🔥 VRAI BOUTON (style simple mais fonctionnel) */}
+      <div style={{ marginTop: 20 }}>
+        <Link
+          href="/"
+          style={{
+            display: "inline-block",
+            padding: "12px 18px",
+            background: "black",
+            color: "white",
+            borderRadius: 10,
+            textDecoration: "none"
+          }}
+        >
+          🔎 Tester un SMS suspect
+        </Link>
+      </div>
 
       <hr style={{ marginTop: 40 }} />
 
@@ -65,11 +65,11 @@ export default function Page() {
       <ul>
         <li><Link href="/arnaque-dhl">Arnaque SMS DHL</Link></li>
         <li><Link href="/arnaque-chronopost">Arnaque SMS Chronopost</Link></li>
-        <li><Link href="/colis-bloque">Colis bloqué : arnaque ou vrai ?</Link></li>
-        <li><Link href="/paiement-livraison">Paiement livraison suspect</Link></li>
-        <li><Link href="/arnaque-livraison-quefaire">Que faire en cas de SMS suspect</Link></li>
+        <li><Link href="/colis-bloque">Colis bloqué</Link></li>
+        <li><Link href="/paiement-livraison">Paiement livraison</Link></li>
+        <li><Link href="/arnaque-livraison-quefaire">Que faire ?</Link></li>
       </ul>
 
-    </main>
+    </PageWrapper>
   );
 }
