@@ -9,65 +9,133 @@ export default function Home() {
   const [details, setDetails] = useState("");
 
   function analyze() {
-    const lower = text.toLowerCase();
+  const lower = text.toLowerCase();
 
-    let score = 0;
-    let reasons = [];
+  let score = 0;
+  let reasons: string[] = [];
 
-    const keywords = [
-      "colis",
-      "dhl",
-      "chronopost",
-      "mondial relay",
-      "ups",
-      "clique",
-      "urgent",
-      "paiement",
-      "retard",
-      "adresse"
-    ];
+  // 🔴 Risques forts
+  const highRisk = [
+    "paiement",
+    "carte bancaire",
+    "amende",
+    "douane",
+    "suspendu",
+    "bloqué",
+    "expiré",
+    "urgent",
+    "cliquez",
+    "verrouillé"
+  ];
 
-    keywords.forEach((word) => {
-      if (lower.includes(word)) {
-        score += 1;
-        reasons.push(`Mot suspect détecté : ${word}`);
+  // 🟡 Risques moyens
+  const mediumRisk = [
+    "colis",
+    "livraison",
+    "adresse",
+    "retard",
+    "relais"
+  ];
+
+  // 🟢 Confiance contexte logistique
+  const safeSignals = [
+    "arrivé au relais",
+    "disponible",
+    "point relais",
+    "chronopost",
+    "dhl",
+    "ups",
+    "colissimo"
+  ];
+
+  // 🔴 High risk scoring
+  highRisk.forEach((word) => {
+    if (lower.includes(word)) {
+      score += 20;
+      reasons.push(`Signal dangereux : ${word}`);
+    }
+  });
+
+  // 🟡 Medium risk scoring
+  mediumRisk.forEach((word) => {
+    if (lower.includes(word)) {
+      score += 8;
+      reasons.push(`Contexte livraison : ${word}`);
+    }
+  });
+
+  // 🟢 Safe signals (réduction du risque)
+  safeSignals.forEach((word) => {
+    if (lower.includes(word)) {
+      score -= 10;
+      reasons.push(`Signal logistique normal : ${word}`);
+    }
+  });
+
+  // 🔗 URLs
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const urls = text.match(urlRegex);
+
+  if (urls) {
+    score += 15;
+    reasons.push("Lien détecté dans le message");
+
+    urls.forEach((url) => {
+      if (
+        url.includes("bit.ly") ||
+        url.includes("tinyurl") ||
+        url.includes("t.co")
+      ) {
+        score += 20;
+        reasons.push("Lien raccourci (très suspect)");
+      }
+
+      let hostname = "";
+
+      try {
+        hostname = new URL(url).hostname;
+      } catch {
+        score += 20;
+        reasons.push("URL invalide");
+        return;
+      }
+
+      const trusted = [
+        "chronopost.fr",
+        "dhl.com",
+        "ups.com",
+        "laposte.fr",
+        "mondialrelay.fr",
+        "pkup.fr"
+      ];
+
+      const isTrusted = trusted.some((d) => hostname.endsWith(d));
+
+      if (isTrusted) {
+        score -= 25;
+        reasons.push(`Domaine officiel : ${hostname}`);
       }
     });
-
-    const urlRegex = /(https?:\/\/[^\s]+)/g;
-    const urls = text.match(urlRegex);
-
-    if (urls) {
-      score += urls.length * 2;
-      reasons.push("Lien détecté dans le message");
-
-      urls.forEach((url) => {
-        if (
-          url.includes("bit.ly") ||
-          url.includes("tinyurl") ||
-          url.includes("t.co")
-        ) {
-          score += 2;
-          reasons.push("Lien raccourci détecté");
-        }
-
-        if (url.includes("-") && url.includes("colis")) {
-          score += 2;
-          reasons.push("Domaine potentiellement frauduleux");
-        }
-      });
-    }
-
-    if (score >= 5) {
-      setResult("🚨 Risque élevé");
-    } else if (score >= 2) {
-      setResult("⚠️ Risque possible");
-    } else {
-      setResult("✅ Faible risque");
-    }
-
-    setDetails(reasons.join(" • "));
   }
+
+  // 🔥 Normalisation 0–100
+  if (score < 0) score = 0;
+  if (score > 100) score = 100;
+
+  // 🎯 Résultat lisible
+  let result = "";
+
+  if (score >= 70) {
+    result = `🚨 Risque élevé (${score}/100)`;
+  } else if (score >= 30) {
+    result = `⚠️ Risque possible (${score}/100)`;
+  } else {
+    result = `✅ Faible risque (${score}/100)`;
+  }
+
+  setResult(result);
+  setDetails(reasons.join(" • "));
+}
 
   return (
     <main style={{ minHeight: "100vh", background: "#f4f4f4", padding: 40, fontFamily: "Arial" }}>
