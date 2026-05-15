@@ -39,7 +39,7 @@ export default function PageWrapper({
               textDecoration: "none",
             }}
           >
-            Tester un message suspect
+            🔎 Tester un message suspect
           </a>
         </div>
       </div>

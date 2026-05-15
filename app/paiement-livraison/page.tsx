@@ -30,7 +30,7 @@ export default function Page() {
           <li>- Urgence ou blocage colis</li>
         </ul>
 
-        <h2>Important</h2>
+        <h2>Important :</h2>
         <p>
           Les transporteurs ne demandent pas de paiement via SMS.
         </p>

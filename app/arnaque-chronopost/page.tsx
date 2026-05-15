@@ -34,9 +34,6 @@ export default function Page() {
           Chronopost ne demande jamais de paiement par SMS.
         </p>
 
-        <Link href="/">
-          🔎 Tester un SMS suspect
-        </Link>
       </main>
 
     </PageWrapper>

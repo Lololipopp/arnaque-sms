@@ -39,23 +39,6 @@ export default function Page() {
 
       <h2>Vérifier un message reçu :</h2>
 
-      {/* 🔥 VRAI BOUTON (style simple mais fonctionnel) */}
-      <div style={{ marginTop: 20 }}>
-        <Link
-          href="/"
-          style={{
-            display: "inline-block",
-            padding: "12px 18px",
-            background: "black",
-            color: "white",
-            borderRadius: 10,
-            textDecoration: "none"
-          }}
-        >
-          🔎 Tester un SMS suspect
-        </Link>
-      </div>
-
       <hr style={{ marginTop: 40 }} />
 
       <h2>Pages associées</h2>
