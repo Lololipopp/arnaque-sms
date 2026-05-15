@@ -1,8 +1,8 @@
+import PageWrapper from "@/components/PageWrapper";
+
 export default function Page() {
   return (
-    <main style={{ padding: 40, fontFamily: "Arial", maxWidth: 800 }}>
-      <h1>Arnaques aux faux SMS de colis</h1>
-
+    <PageWrapper title="Arnaques aux faux SMS de colis">
       <p>
         Les arnaques aux colis sont de plus en plus fréquentes en France.
         Les escrocs envoient des SMS ou emails en se faisant passer pour des services de livraison.
@@ -11,26 +11,20 @@ export default function Page() {
       <h2>Comment ça marche ?</h2>
       <p>
         Vous recevez un message indiquant qu’un colis est bloqué ou en attente de paiement.
-        On vous demande de cliquer sur un lien.
       </p>
 
-      <h2>Exemples de services utilisés</h2>
+      <h2>Transporteurs souvent utilisés</h2>
       <ul>
         <li>Chronopost</li>
         <li>DHL</li>
         <li>UPS</li>
-        <li>Colis privé</li>
+        <li>Colissimo</li>
       </ul>
 
-      <h2>Que faire ?</h2>
+      <h2>Conseil</h2>
       <p>
-        Ne cliquez jamais sur les liens suspects. Vérifiez directement sur le site officiel du transporteur.
+        Ne cliquez jamais sur un lien suspect. Vérifiez directement sur le site officiel.
       </p>
-
-      <h2>Vérifiez un message ici</h2>
-      <a href="/" style={{ color: "blue" }}>
-        Tester un SMS suspect
-      </a>
-    </main>
+    </PageWrapper>
   );
 }

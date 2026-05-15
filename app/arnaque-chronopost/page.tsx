@@ -1,21 +1,21 @@
+import PageWrapper from "@/components/PageWrapper";
+
 export default function Page() {
   return (
-    <main style={{ padding: 40, fontFamily: "Arial", maxWidth: 800 }}>
-      <h1>Faux SMS Chronopost : comment les reconnaître ?</h1>
-
+    <PageWrapper title="Faux SMS Chronopost : comment les reconnaître ?">
       <p>
-        Les faux SMS Chronopost sont une arnaque très courante en France.
+        Les faux SMS Chronopost sont très fréquents en France et visent à voler vos données ou vos paiements.
       </p>
 
-      <h2>Exemple de message frauduleux</h2>
+      <h2>Exemple d’arnaque</h2>
       <p>
-        “Votre colis est en attente. Paiement requis : cliquez ici”
+        “Votre colis est en attente. Paiement de 2,99€ requis pour livraison.”
       </p>
 
-      <h2>Signes d’arnaque</h2>
+      <h2>Signes d’alerte</h2>
       <ul>
         <li>Lien étrange</li>
-        <li>Urgence excessive</li>
+        <li>Urgence artificielle</li>
         <li>Demande de paiement</li>
       </ul>
 
@@ -23,10 +23,6 @@ export default function Page() {
       <p>
         Chronopost ne demande jamais de paiement par SMS.
       </p>
-
-      <a href="/" style={{ color: "blue" }}>
-        Vérifier un SMS
-      </a>
-    </main>
+    </PageWrapper>
   );
 }

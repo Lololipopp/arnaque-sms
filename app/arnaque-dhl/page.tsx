@@ -1,32 +1,28 @@
+import PageWrapper from "@/components/PageWrapper";
+
 export default function Page() {
   return (
-    <main style={{ padding: 40, fontFamily: "Arial", maxWidth: 800 }}>
-      <h1>Faux SMS DHL : attention aux arnaques</h1>
-
+    <PageWrapper title="Faux SMS DHL : attention aux arnaques">
       <p>
-        Les arnaques utilisant DHL sont fréquentes et visent à voler vos données bancaires.
+        Les escrocs utilisent DHL pour tromper les utilisateurs avec de faux messages de livraison.
       </p>
 
-      <h2>Exemple de faux SMS</h2>
+      <h2>Exemple</h2>
       <p>
-        “Votre colis DHL est bloqué. Mise à jour requise immédiatement.”
+        “Votre colis DHL est bloqué, cliquez ici pour le débloquer.”
       </p>
 
-      <h2>Comment reconnaître une arnaque</h2>
+      <h2>Signes</h2>
       <ul>
-        <li>Lien suspect</li>
-        <li>Demande urgente</li>
-        <li>Orthographe étrange</li>
+        <li>Lien non officiel</li>
+        <li>Pression urgente</li>
+        <li>Demande de données personnelles</li>
       </ul>
 
       <h2>Conseil</h2>
       <p>
-        Ne cliquez jamais sur un lien sans vérifier la source officielle.
+        Vérifiez toujours sur le site officiel DHL.
       </p>
-
-      <a href="/" style={{ color: "blue" }}>
-        Tester un SMS
-      </a>
-    </main>
+    </PageWrapper>
   );
 }
