@@ -29,9 +29,9 @@ export default function Page() {
           <li>- Service client</li>
         </ul>
 
-        <h2>Si vous avez cliqué</h2>
+        <h2>Si vous avez cliqué :</h2>
         <p>
-          Changez vos mots de passe et surveillez vos comptes bancaires.
+          Changez vos mots de passe et surveillez vos comptes bancaires. Sinon, supprimez simplement le message et signalez le numéro.
         </p>
 
       </main>
