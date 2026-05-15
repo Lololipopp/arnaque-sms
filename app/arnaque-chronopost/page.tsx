@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Faux SMS Chronopost : arnaques et comment les éviter",
+  description:
+    "Apprenez à reconnaître les faux SMS Chronopost et évitez les tentatives de phishing liées aux colis.",
+};
 import PageWrapper from "@/components/PageWrapper";
 
 export default function Page() {
@@ -26,3 +31,8 @@ export default function Page() {
     </PageWrapper>
   );
 }
+<div style={{ marginTop: 30 }}>
+  <a href="/" style={{ color: "blue" }}>
+    🔎 Tester un SMS suspect ici
+  </a>
+</div>

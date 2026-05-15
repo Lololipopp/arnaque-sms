@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Arnaque colis SMS : comment les reconnaître et éviter les pièges",
+  description:
+    "Découvrez comment repérer une arnaque aux faux SMS de colis (Chronopost, DHL, UPS) et protégez-vous des fraudes en ligne.",
+};
 import PageWrapper from "@/components/PageWrapper";
 
 export default function Page() {
@@ -28,3 +33,8 @@ export default function Page() {
     </PageWrapper>
   );
 }
+<div style={{ marginTop: 30 }}>
+  <a href="/" style={{ color: "blue" }}>
+    🔎 Tester un SMS suspect ici
+  </a>
+</div>

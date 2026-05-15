@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Arnaque DHL SMS : comment détecter les faux messages",
+  description:
+    "Guide pour identifier les faux SMS DHL et éviter les arnaques de livraison de colis.",
+};
 import PageWrapper from "@/components/PageWrapper";
 
 export default function Page() {
@@ -26,3 +31,8 @@ export default function Page() {
     </PageWrapper>
   );
 }
+<div style={{ marginTop: 30 }}>
+  <a href="/" style={{ color: "blue" }}>
+    🔎 Tester un SMS suspect ici
+  </a>
+</div>
