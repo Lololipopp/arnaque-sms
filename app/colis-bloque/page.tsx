@@ -12,7 +12,6 @@ export default function Page() {
     <PageWrapper title="SMS colis bloqué : arnaque ou vrai message ?">
 
       <main>
-        <h1>SMS colis bloqué arnaque : comment savoir si c’est un faux message</h1>
 
         <p>
           De nombreux SMS indiquent qu’un colis est bloqué et demandent une action urgente.
@@ -25,11 +24,11 @@ export default function Page() {
           Un lien est fourni pour “débloquer” la situation.
         </p>
 
-        <h2>Signes d’une arnaque</h2>
+        <h2>Signes d’une arnaque :</h2>
         <ul>
-          <li>Message urgent</li>
-          <li>Lien suspect</li>
-          <li>Demande de paiement</li>
+          <li>- Message urgent</li>
+          <li>- Lien suspect</li>
+          <li>- Demande de paiement</li>
         </ul>
 
         <h2>Que faire ?</h2>
@@ -37,7 +36,6 @@ export default function Page() {
           Ne cliquez jamais sur le lien. Vérifiez directement sur le site du transporteur.
         </p>
 
-        <h2>Vérifier un SMS suspect</h2>
         <Link href="/">
           🔎 Tester un SMS suspect
         </Link>

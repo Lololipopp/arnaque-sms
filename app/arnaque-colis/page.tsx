@@ -16,20 +16,20 @@ export default function Page() {
         Le lien redirige vers un faux site imitant un transporteur.
       </p>
 
-      <h2>Transporteurs souvent usurpés</h2>
+      <h2>Transporteurs souvent usurpés :</h2>
       <ul>
-        <li>Chronopost</li>
-        <li>DHL</li>
-        <li>UPS</li>
-        <li>Colissimo</li>
+        <li>- Chronopost</li>
+        <li>- DHL</li>
+        <li>- UPS</li>
+        <li>- Colissimo</li>
       </ul>
 
       <h2>Comment reconnaître un faux SMS ?</h2>
       <ul>
-        <li>Message urgent ou menaçant</li>
-        <li>Lien suspect</li>
-        <li>Demande de paiement</li>
-        <li>Fautes ou formulation étrange</li>
+        <li>- Message urgent ou menaçant</li>
+        <li>- Lien suspect</li>
+        <li>- Demande de paiement</li>
+        <li>- Fautes ou formulation étrange</li>
       </ul>
 
       <h2>Que faire ?</h2>
@@ -37,7 +37,7 @@ export default function Page() {
         Ne cliquez jamais sur les liens. Vérifiez directement sur le site officiel du transporteur.
       </p>
 
-      <h2>Tester un SMS suspect</h2>
+      <h2>Vérifier un message reçu :</h2>
 
       {/* 🔥 VRAI BOUTON (style simple mais fonctionnel) */}
       <div style={{ marginTop: 20 }}>

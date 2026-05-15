@@ -12,7 +12,6 @@ export default function Page() {
     <PageWrapper title="SMS livraison arnaque : que faire ?">
 
       <main>
-        <h1>SMS livraison arnaque : que faire si vous recevez un message suspect ?</h1>
 
         <p>
           Si vous recevez un SMS suspect concernant une livraison, il est important de réagir rapidement pour éviter une arnaque.
@@ -23,11 +22,11 @@ export default function Page() {
           La première règle est de ne jamais ouvrir les liens contenus dans ces messages.
         </p>
 
-        <h2>Vérifiez directement</h2>
+        <h2>Vérifiez directement :</h2>
         <ul>
-          <li>Site officiel du transporteur</li>
-          <li>Application officielle</li>
-          <li>Service client</li>
+          <li>- Site officiel du transporteur</li>
+          <li>- Application officielle</li>
+          <li>- Service client</li>
         </ul>
 
         <h2>Si vous avez cliqué</h2>
@@ -35,7 +34,6 @@ export default function Page() {
           Changez vos mots de passe et surveillez vos comptes bancaires.
         </p>
 
-        <h2>Vérifier un SMS suspect</h2>
         <Link href="/">
           🔎 Tester un SMS suspect
         </Link>

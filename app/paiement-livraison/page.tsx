@@ -12,7 +12,6 @@ export default function Page() {
     <PageWrapper title="SMS de paiement pour livraison : arnaque ou vrai ?">
 
       <main>
-        <h1>SMS paiement livraison arnaque : faut-il vraiment payer ?</h1>
 
         <p>
           Certains SMS demandent de payer quelques euros pour recevoir un colis.
@@ -24,11 +23,11 @@ export default function Page() {
           Les escrocs réclament un petit montant (1€ à 5€) pour “frais de livraison” ou “douane”.
         </p>
 
-        <h2>Signes d’alerte</h2>
+        <h2>Signes d’alerte :</h2>
         <ul>
-          <li>Petit paiement demandé</li>
-          <li>Lien de paiement externe</li>
-          <li>Urgence ou blocage colis</li>
+          <li>- Petit paiement demandé</li>
+          <li>- Lien de paiement externe</li>
+          <li>- Urgence ou blocage colis</li>
         </ul>
 
         <h2>Important</h2>
@@ -36,7 +35,6 @@ export default function Page() {
           Les transporteurs ne demandent pas de paiement via SMS.
         </p>
 
-        <h2>Vérifier un SMS suspect</h2>
         <Link href="/">
           🔎 Tester un SMS suspect
         </Link>

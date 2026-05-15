@@ -12,7 +12,6 @@ export default function Page() {
     <PageWrapper title="Faux SMS DHL : attention aux arnaques">
 
       <main>
-        <h1>SMS DHL arnaque : comment reconnaître un faux message de colis</h1>
 
         <p>
           Les escrocs utilisent DHL pour tromper les utilisateurs avec de faux messages de livraison de colis.
@@ -25,9 +24,9 @@ export default function Page() {
 
         <h2>Signes d’une arnaque DHL</h2>
         <ul>
-          <li>Lien non officiel</li>
-          <li>Message urgent ou menaçant</li>
-          <li>Demande de données personnelles ou paiement</li>
+          <li>- Lien non officiel</li>
+          <li>- Message urgent ou menaçant</li>
+          <li>- Demande de données personnelles ou paiement</li>
         </ul>
 
         <h2>Comment réagir ?</h2>
@@ -35,7 +34,6 @@ export default function Page() {
           Vérifiez toujours directement sur le site officiel de DHL avant toute action.
         </p>
 
-        <h2>Vérifier un SMS suspect</h2>
         <Link href="/">
           🔎 Tester un SMS suspect
         </Link>
